@@ -316,7 +316,7 @@ local antiKnockbackSwitch =
                 local rootPart = character:FindFirstChild("HumanoidRootPart")
                 if rootPart then
                     local bodyVelocity = Instance.new("BodyVelocity")
-                    bodyVelocity.MaxForce = Vector3.new(100000, 2, 100000)
+                    bodyVelocity.MaxForce = Vector3.new(100000, 0, 100000)
                     bodyVelocity.Velocity = Vector3.new(0, 0, 0)
                     bodyVelocity.P = 1250
                     bodyVelocity.Parent = rootPart
@@ -329,7 +329,7 @@ local antiKnockbackSwitch =
                 local rootPart = character:FindFirstChild("HumanoidRootPart")
                 if rootPart then
                     local existingVelocity = rootPart:FindFirstChild("BodyVelocity")
-                    if existingVelocity and existingVelocity.MaxForce == Vector3.new(100000, 2, 100000) then
+                    if existingVelocity and existingVelocity.MaxForce == Vector3.new(100000, 0, 100000) then
                         existingVelocity:Destroy()
                     end
                 end
